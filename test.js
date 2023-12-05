@@ -60,11 +60,16 @@ workbook.xlsx
         (enCell.value && enCell.value.richText
           ? enCell.value.richText[0].text
           : "");
+      const arValue =
+        arCell.text ||
+        (arCell.value && arCell.value.richText
+          ? arCell.value.richText[0].text
+          : "");
 
       // Create an object to store the data with "en" and "ar" keys
       const rowData = {
         en: enValue,
-        ar: arCell.value,
+        ar: arValue,
       };
 
       // Add the rowData object to the data array
