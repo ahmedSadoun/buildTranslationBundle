@@ -68,8 +68,8 @@ workbook.xlsx
 
       // Create an object to store the data with "en" and "ar" keys
       const rowData = {
-        en: enValue,
-        ar: arValue,
+        en: enValue.trim(),
+        ar: arValue.trim(),
       };
 
       // Add the rowData object to the data array
