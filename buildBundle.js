@@ -55,8 +55,8 @@ workbook.xlsx
 
     // Iterate through rows (excluding the header row)
     for (let rowNumber = 2; rowNumber <= worksheet.rowCount; rowNumber++) {
-      const enCell = worksheet.getCell(`A${rowNumber}`);
-      const arCell = worksheet.getCell(`B${rowNumber}`);
+      const enCell = worksheet.getCell(`A${rowNumber}`); // The first column contains en values
+      const arCell = worksheet.getCell(`B${rowNumber}`); // The second column contains the second lang, for me it's ar
 
       // Extract the text content from rich text if present
       const enValue =
