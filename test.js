@@ -76,8 +76,8 @@ workbook.xlsx
       data.push(rowData);
     }
     let translationBundle = formatStringsList(data);
-    readToTxtFile("./en.txt", translationBundle.enResult);
-    readToTxtFile("./ar.txt", translationBundle.arResult);
+    readToTxtFile("./en/app-strings.json", translationBundle.enResult);
+    readToTxtFile("./ar/app-strings.json", translationBundle.arResult);
     // console.log(translationBundle.arResult);
     // Now the 'data' array contains objects for each row
     // console.log("Data:", data);
