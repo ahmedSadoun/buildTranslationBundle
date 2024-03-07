@@ -1,5 +1,9 @@
 const ExcelJS = require("exceljs");
 const fs = require("fs");
+const xcelFileName = "./en-ar.xlsx";
+const sheetName = "Sheet1";
+const enBundleFilePath = "./en/app-strings.json";
+const arBundleFilePath = "./ar/app-strings.json";
 
 function readToTxtFile(filePath, data) {
   // Your data to be written to the text file
@@ -41,10 +45,10 @@ const workbook = new ExcelJS.Workbook();
 
 // Load the Excel file
 workbook.xlsx
-  .readFile("./en-ar.xlsx")
+  .readFile(xcelFileName)
   .then(() => {
     // Use the workbook or specific worksheet
-    const worksheet = workbook.getWorksheet("Sheet1");
+    const worksheet = workbook.getWorksheet(sheetName);
 
     // Initialize an array to store the data objects
     const data = [];
@@ -76,8 +80,8 @@ workbook.xlsx
       data.push(rowData);
     }
     let translationBundle = formatStringsList(data);
-    readToTxtFile("./en/app-strings.json", translationBundle.enResult);
-    readToTxtFile("./ar/app-strings.json", translationBundle.arResult);
+    readToTxtFile(enBundleFilePath, translationBundle.enResult);
+    readToTxtFile(arBundleFilePath, translationBundle.arResult);
     // console.log(translationBundle.arResult);
     // Now the 'data' array contains objects for each row
     // console.log("Data:", data);
