@@ -1,11 +1,11 @@
 {
   "name": "translation-bundle",
   "version": "1.0.0",
-  "description": "",
+  "description": "This Has been built by Ahmed Saadoun to help build the translation bundle",
   "main": "buildBundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ahmed Saadoun",
   "license": "ISC"
 }
