@@ -10,4 +10,4 @@ Make sure to use the Excel sheet provided in the repo.
 
 **How to use it?**
 1- put your en sentences in column A named en and the corresponding ar translations in column B named ar
-2-  open test.js file and run using node buildBundle.js
+2- run using node buildBundle.js
